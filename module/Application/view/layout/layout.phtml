@@ -1,26 +1,28 @@
-<?= $this->doctype() ?>
-
+<?php echo $this->doctype(); ?>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <?= require_once('meta.phtml'); ?>
+    <head>        
+        <?php include 'meta.phtml';  ?> 
         <!-- Le styles -->
-        <?= require_once('css.phtml'); ?>
-        <!-- Scripts -->
-        <?= require_once('js.phtml');?>
+        <?php include 'css.phtml';  ?> 
     </head>
     <body class="nav-md">        
        <div class="container body">
-         <div class="main_container">
-          <?= require_once("left-menu.phtml") ?>
-          <?= require_once("header.phtml") ?>
-            <?= $this->content ?>
-            <hr>
-            <footer>
-                <p>&copy; <?= date('Y') ?> by ARIAKA Ltd. Todos los derechos reservados.</p>
-            </footer>
+            <div class="main_container">
+                <?php include 'left-menu.phtml'; ?>
+                <?php include 'header.phtml'; ?>
+                    <div class="right_col" rol="main">
+                        <?php echo $this->content; ?>
+                    </div>           
+                <footer>
+                    <div class="pull-right">
+                    <p>&copy; <?php echo date('Y'); ?> ARIAKA LTDA. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>
             </div>
         </div>
-        <?= $this->inlineScript() ?>
+        <!-- Scripts -->
+        <?php include 'js.phtml'; ?>
+        <?php echo $this->inlineScript(); ?>
     </body>
 </html>

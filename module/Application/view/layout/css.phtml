@@ -1,13 +1,12 @@
- <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
+ <?php echo $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
             ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
-            ->prependStylesheet($this->basePath('css/font-awsome/css/font-awsome.min.css'))            
+            ->prependStylesheet($this->basePath('css/font-awesome.css'))            
             ->prependStylesheet($this->basePath('css/nprogress.css'))
             ->prependStylesheet($this->basePath('css/green.css'))
             ->prependStylesheet($this->basePath('css/bootstrap-progressbar-3.3.4.min.css'))
             ->prependStylesheet($this->basePath('css/jqvmap.min.css'))
             ->prependStylesheet($this->basePath('css/daterangepicker.css'))
-            ->prependStylesheet($this->basePath('css/custom.min.css'))
-
+            ->prependStylesheet($this->basePath('css/custom.min.css'));
      ?>      
 	
    
