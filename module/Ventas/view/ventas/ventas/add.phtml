@@ -1,4 +1,4 @@
-<?php $values = null; ?>
+<?php echo($this->message ? 'true' : 'false'); ?>
 
 <div class="col-md-12 col-sm-12 col-xs-12">
 <div class="x_panel">
@@ -24,16 +24,12 @@
     </div>
         <div class="x_content">        
             <div class="row">
-                <div class="col-md-6 col-sm-12 col-xs-12">                    
-                          <select id="heard" class="form-control" required>
-                            <option value="">Choose..</option>
-                            <option value="press">ASG-WINGR-60-HD-TD</option>
-                            <option value="net">ASG-TTTHD-150-TD</option>
-                            <option value="mouth">ASG-TTDR-150</option>
-                            <option value="mouth">ASG-TTSCR-60-TD</option>
-                          </select>                  
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <label for="produ-code">Producto: </label>
+                     <input type="text" id="produ-code" required="required" class="col-sm-12 col-xs-12">                            
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12">
+                      <label for="cantidad-id">Cantidad: </label>
                       <input type="text" id="cantidad-id" required="required" class="col-md-12 col-xs-12">            
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12">
@@ -62,9 +58,10 @@
                       <button id="btn-guardar-produ" type="button" class="btn btn-success">Guardar</button>                                
                 </div>
                 <div class="col-md-1 col-sm-12 col-xs-12">
-                    <button type="button" class="btn btn-danger">Cancelar</button>                   
+                    <button id="btn-cancel-produ" type="button" class="btn btn-danger">Cancelar</button>                   
                 </div>
              </div>
+             <div class='notifications top-left'></div>
         </div>
     </div>
 </div>

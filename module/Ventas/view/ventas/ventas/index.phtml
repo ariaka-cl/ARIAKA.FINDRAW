@@ -79,6 +79,19 @@
             </div>
         </div>
 
+<?php foreach($venta as $post): ?>
+
+<h3>
+  <a href="#">
+    <?= $this->escapeHtml($post->getNombre()); ?>
+  </a>    
+</h3>
+        
+<p>    
+   <?= $this->escapeHtml($post->getDescripcion()); ?>
+</p>
+
+<?php endforeach; ?>
 
 <?php 
 $this->inlineScript()->appendFile($this->basePath('/scripts/ventas.js'), 'text/javascript');
