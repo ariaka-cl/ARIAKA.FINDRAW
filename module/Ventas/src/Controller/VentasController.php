@@ -4,6 +4,7 @@ namespace Ventas\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Ventas\Entity\Productos;
+use Ventas\Entity\Ventas;
 use Zend\View\Model\JsonModel;
 
 class VentasController extends AbstractActionController
@@ -35,7 +36,7 @@ class VentasController extends AbstractActionController
        if($this->getRequest()->isPost()) {
 
            echo 'console.log("Data posted");';           
-            return new ViewModel(array('message'=>"Hola que hace"));
+            return new ViewModel(['message'=>"Hola que hace"]);
        }else {
             
        }
@@ -55,4 +56,18 @@ class VentasController extends AbstractActionController
         }
         return new JsonModel(['Productos' => $data]);       
     }
+    
+    public function listaVentasAction() {
+        $ventas = $this->entityManager->getRepository(Ventas::Class)
+                ->findAll();
+
+        foreach ($ventas as $value) {
+            $data[] = array('OrdenCompra' => $value->getOrdenCompra(),
+                'FechaCreacion' => $value->getFechaCreacion(),
+                'FechaCompra' => $value->getFechaCompra(),
+                'FechaEntrega' => $value->getFechaEntrega());
+        }
+        return new JsonModel(['Ventas' => $data]);
+    }
+
 }

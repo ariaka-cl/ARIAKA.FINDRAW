@@ -3,6 +3,7 @@
     var base_url = window.location.origin;
     var counter = 1;
     var t = $('#table-produ').DataTable();
+    var tv = $('#dt-lista-ventas').DataTable();
 
     $('#add-btn').click(function () {
         window.location.replace(base_url + '/ventas/add');
@@ -50,7 +51,7 @@
     
     $.getJSON(base_url + '/ventas/productos').done(function (result) {
         var items = [];
-        $.each(result.Productos, function (i, item) {
+        $.each(result.Productos, function (i) {
             items.push(result.Productos[i].Codigo);
         });
         $('#produ-code').autocomplete({
@@ -58,4 +59,19 @@
         });
         return items;
     });
+              
+    
+    $.getJSON(base_url + '/ventas/listaVentas').done(function (result) {
+        $.each(result.Ventas, function (i) {
+            tv.row.add([
+                result.Ventas[i].OrdenCompra,
+                moment(result.Ventas[i].FechaCreacion).format('YYYY-DD-MM'),
+                moment(result.Ventas[i].FechaCompra).format('YYYY-DD-MM'),
+                moment(result.Ventas[i].FechaEntrega).format('YYYY-DD-MM'),
+                "linkCotizacion"
+            ]).draw(false);
+        });
+    });
+    
+     
 })(jQuery);
