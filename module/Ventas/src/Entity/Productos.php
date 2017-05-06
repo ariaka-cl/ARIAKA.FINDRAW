@@ -107,5 +107,4 @@ class Productos
     $this->stock = $stock;
   }
 
-
 }

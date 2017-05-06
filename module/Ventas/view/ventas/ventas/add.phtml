@@ -1,5 +1,6 @@
-<?php echo($this->message ? 'true' : 'false'); ?>
-
+<?php 
+$id = $this->id;
+?>
 <div class="col-md-12 col-sm-12 col-xs-12">
 <div class="x_panel">
     <div class="x_title">
@@ -26,42 +27,42 @@
             <div class="row">
                 <div class="col-md-6 col-sm-12 col-xs-12">
                     <label for="produ-code">Producto: </label>
-                     <input type="text" id="produ-code" required="required" class="col-sm-12 col-xs-12">                            
+                     <input type="text" id="produ-code" required="required" class="col-sm-12 col-xs-12 form-control autocomplete"> 
+                     <input type="text" id="produ-id" required="required" style="display:none">
                 </div>
                 <div class="col-md-3 col-sm-12 col-xs-12">
                       <label for="cantidad-id">Cantidad: </label>
-                      <input type="text" id="cantidad-id" required="required" class="col-md-12 col-xs-12">            
+                      <input type="text" id="cantidad-id" required="required" class="col-md-12 col-xs-12 form-control">            
                 </div>
-                <div class="col-md-3 col-sm-12 col-xs-12">
-                    <button id="add-prod" type="button" class="btn btn-success">Agregar</button>                   
+                <div class="col-md-3 col-sm-12 col-xs-12">                    
+                    <button id="add-prod" type="button" class="btn btn-success">Agregar</button>
+                    <button id="delete-prod" type="button" class="btn btn-danger">Eliminar</button>
                 </div>
             </div>
             <div class="clearfix"></div><br><br>
             <div class="col-sm-12 col-xs-12">
                 <table id="table-produ" class="table table-striped table-hover dt-responsive">
                         <thead>
-                            <tr>                           
+                            <tr>
+                            <th>Id</th>
+                            <th>VentaId</th>
                             <th>Producto</th>
                             <th>Cantidad Items</th>
                             <th>Fecha Creación</th>
-                            <th>Reservas</th>                         
                             </tr>
                         </thead>                        
-                        <tbody>                    
-                                                      
-                       </tbody>
+                        <tbody></tbody>
                 </table>
             </div>
              <div class="clearfix"></div><br><br>
-             <div class="row">
-                <div class="col-md-1 col-sm-12 col-xs-12">
-                      <button id="btn-guardar-produ" type="button" class="btn btn-success">Guardar</button>                                
+             <div class="row pull-right">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                      <button id="btn-guardar-produ" type="button" class="btn btn-success" value='<?php echo $id; ?>'>Guardar</button>                                
                 </div>
-                <div class="col-md-1 col-sm-12 col-xs-12">
+                <div class="col-md-6 col-sm-12 col-xs-12">
                     <button id="btn-cancel-produ" type="button" class="btn btn-danger">Cancelar</button>                   
                 </div>
-             </div>
-             <div class='notifications top-left'></div>
+             </div>             
         </div>
     </div>
 </div>
