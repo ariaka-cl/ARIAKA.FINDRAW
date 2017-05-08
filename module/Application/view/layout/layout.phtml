@@ -1,28 +1,30 @@
-<?php echo $this->doctype(); ?>
+<!DOCTYPE html>
 <html lang="en">
-    <head>        
-        <?php include 'meta.phtml';  ?> 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Meta, title, CSS, favicons, etc. -->    
+        <?php include 'meta.phtml'; ?> 
         <!-- Le styles -->
-        <?php include 'css.phtml';  ?> 
+        <?php include 'css.phtml'; ?>       
     </head>
-    <body class="nav-md">        
-       <div class="container body">
-            <div class="main_container">
-                <?php include 'left-menu.phtml'; ?>
+    <body class="nav-md">
+        <div class="container body">                      
+            <div class="main_container"> 
+                <?php include 'left-menu.phtml'; ?>   
                 <?php include 'header.phtml'; ?>
-                    <div class="right_col" rol="main">
-                        <?php echo $this->content; ?>
-                    </div>           
+                <div class="right_col" rol="main">
+                    <?php echo $this->content; ?>
+                </div>           
                 <footer>
                     <div class="pull-right">
-                    <p>&copy; <?php echo date('Y'); ?> ARIAKA LTDA. Todos los derechos reservados.</p>
+                        <p>&copy; <?php date('Y'); ?> ARIAKA LTDA. Todos los derechos reservados.</p>
                     </div>
                     <div class="clearfix"></div>
                 </footer>
             </div>
         </div>
-        <!-- Scripts -->
-        <?php include 'js.phtml'; ?>
+        <!-- Scripts -->   
+        <?php include 'js.phtml'; ?>     
         <?php echo $this->inlineScript(); ?>
     </body>
 </html>

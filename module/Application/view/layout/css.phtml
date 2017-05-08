@@ -1,13 +1,17 @@
- <?php echo $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
-            ->prependStylesheet($this->basePath('css/bootstrap.min.css'))
-            ->prependStylesheet($this->basePath('css/font-awesome.css'))            
-            ->prependStylesheet($this->basePath('css/nprogress.css'))
-            ->prependStylesheet($this->basePath('css/green.css'))
-            ->prependStylesheet($this->basePath('css/bootstrap-progressbar-3.3.4.min.css'))
-            ->prependStylesheet($this->basePath('css/jqvmap.min.css'))
-            ->prependStylesheet($this->basePath('css/daterangepicker.css'))
-            ->prependStylesheet($this->basePath('css/custom.min.css'));
-     ?>      
-	
-   
-   
+<?php
+echo $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'])
+        ->prependStylesheet($this->basePath('css/custom.min.css'))
+        ->prependStylesheet($this->basePath('css/scroller.bootstrap.min.css'))
+        ->prependStylesheet($this->basePath('css/responsive.bootstrap.min.css'))
+        ->prependStylesheet($this->basePath('css/fixedHeader.bootstrap.min.css'))
+        ->prependStylesheet($this->basePath('css/buttons.bootstrap.min.css'))
+        ->prependStylesheet($this->basePath('css/dataTables.bootstrap.min.css'))
+        ->prependStylesheet($this->basePath('css/daterangepicker.css'))
+        ->prependStylesheet($this->basePath('css/jqvmap.min.css'))
+        ->prependStylesheet($this->basePath('css/bootstrap-progressbar-3.3.4.min.css'))
+        ->prependStylesheet($this->basePath('css/green.css'))
+        ->prependStylesheet($this->basePath('css/nprogress.css'))
+        ->prependStylesheet($this->basePath('css/animate.min.css'))
+        ->prependStylesheet($this->basePath('css/font-awesome.css'))
+        ->prependStylesheet($this->basePath('css/jquery-ui.min.css'))
+        ->prependStylesheet($this->basePath('css/bootstrap.min.css'));
