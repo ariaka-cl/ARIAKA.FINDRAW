@@ -19,5 +19,6 @@ return [
     'Zend\Validator',
     'Application',
     'Login',
-    'Ventas',    
+    'Ventas',
+    'Usuarios',
 ];

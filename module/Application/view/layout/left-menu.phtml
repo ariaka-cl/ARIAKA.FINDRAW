@@ -9,7 +9,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src= <?php echo $this->basePath('img/img.png') ?> alt="..." class="img-circle profile_img">
+                <img src='<?php echo $this->basePath('img/img.png') ?>' alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
@@ -25,7 +25,7 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-dashboard"></i> Dashboard <span class="fa fa-chevron-down"></span></a>
+                    <li><a href="<?php echo $this->url('application')?>"><i class="fa fa-dashboard"></i> Dashboard <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="index.html">Dashboard</a></li>
                       <li><a href="index2.html">Dashboard2</a></li>
@@ -46,12 +46,8 @@
                       <li><a href="calendar.html">Calendar</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-archive"></i> Bodega <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="tables.html">Tables</a></li>
-                      <li><a href="tables_dynamic.html">Table Dynamic</a></li>
-                    </ul>
-                  </li>                 
+                  <li><a><i class="fa fa-archive"></i> Bodega <span class="fa fa-chevron-down"></span></a></li>
+                  <li><a href= <?php echo $this->url('usuarios') ?>><i class="fa fa-users"></i> Usuarios</a></li>
                 </ul>
               </div>              
             </div>
